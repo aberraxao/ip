@@ -1,1 +1,1 @@
-# ip
+# Introduction to Programming (IP) repository
