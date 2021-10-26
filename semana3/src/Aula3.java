@@ -143,36 +143,6 @@ class Aula3 {
 	// EXTRA A: Function that receives a natural n and returns the biggest difference
 	// between 2 consecutive number primes until n, excluded
 	static int largerDifferenceBetweenPrimes(int n) {
-		int biggestPrime = 0;
-		
-		while (n >= 1) {
-			n = n - 1;
-			if (isPrime(n)) {
-				if (biggestPrime == 0)
-					biggestPrime = n;
-				else 
-					return biggestPrime - n;
-			}
-		}
-		return 1;
-	}
-	
-	static int largerDifferenceBetweenPrimes2(int n) {
-		int i = 2;
-		int biggestPrime = 1;
-		int smallestPrime = 1;
-		
-		while (i < n) {
-			if (isPrime(i)) {
-				smallestPrime = biggestPrime;
-				biggestPrime = i;
-			}
-			i = i + 1;
-		}
-		return biggestPrime - smallestPrime;
-	}
-	
-	static int largerDifferenceBetweenPrimes3(int n) {
 		int i = 2, dif = 0, a = 2;
 		
 		while (i < n) {
