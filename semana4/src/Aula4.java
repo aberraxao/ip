@@ -123,17 +123,17 @@ class Aula4 {
 	 // Include a boolean parameter to include the middle element - for odd lenghts
 	 static int[] firstHalf(int[] v, boolean include) {
 		 if (include && (v.length%2 != 0))
-			 return subArray(0, (int)v.length/2, v);
+			 return subArray(0, v.length/2, v);
 		 else
-			 return subArray(0, (int)(v.length)/2-1, v);
+			 return subArray(0, (v.length)/2-1, v);
 	 }
 	 
 	 // I Obtains the second half of a vector, with similar logic as H
 	 static int[] secondHalf(int[] v, boolean include) {
 		 if (include || (v.length%2 == 0))
-			 return subArray((int)v.length/2, v.length-1, v);
+			 return subArray(v.length/2, v.length-1, v);
 		 else
-			 return subArray((int)(v.length)/2+1, v.length-1, v);
+			 return subArray((v.length)/2+1, v.length-1, v);
 	 }
 	 
 	 // J Build a vector that merges 2 vectors
