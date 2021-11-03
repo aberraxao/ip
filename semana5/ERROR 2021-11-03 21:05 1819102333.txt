@@ -1,0 +1,331 @@
+PandionJ Error Report
+
+org.eclipse.swt.SWTException : Widget is disposed
+
+Exception trace: 
+
+org.eclipse.swt.SWT.error(SWT.java:4893)
+org.eclipse.swt.SWT.error(SWT.java:4808)
+org.eclipse.swt.SWT.error(SWT.java:4779)
+org.eclipse.swt.widgets.Widget.error(Widget.java:560)
+org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:475)
+org.eclipse.swt.widgets.Composite.setFocus(Composite.java:1675)
+pt.iscte.pandionj.StaticInvocationWidget.setFocus(StaticInvocationWidget.java:319)
+org.eclipse.swt.widgets.Control.fixFocus(Control.java:321)
+org.eclipse.swt.widgets.Control.releaseWidget(Control.java:4787)
+org.eclipse.swt.widgets.Composite.releaseWidget(Composite.java:1584)
+org.eclipse.swt.widgets.Widget.release(Widget.java:1350)
+org.eclipse.swt.widgets.Control.release(Control.java:4764)
+org.eclipse.swt.widgets.Composite.releaseChildren(Composite.java:1567)
+org.eclipse.swt.widgets.Widget.release(Widget.java:1338)
+org.eclipse.swt.widgets.Control.release(Control.java:4764)
+org.eclipse.swt.widgets.Composite.releaseChildren(Composite.java:1567)
+org.eclipse.swt.widgets.Widget.release(Widget.java:1338)
+org.eclipse.swt.widgets.Control.release(Control.java:4764)
+org.eclipse.swt.widgets.Composite.releaseChildren(Composite.java:1567)
+org.eclipse.swt.widgets.Widget.release(Widget.java:1338)
+org.eclipse.swt.widgets.Control.release(Control.java:4764)
+org.eclipse.swt.widgets.Composite.releaseChildren(Composite.java:1567)
+org.eclipse.swt.widgets.Canvas.releaseChildren(Canvas.java:281)
+org.eclipse.swt.widgets.Decorations.releaseChildren(Decorations.java:505)
+org.eclipse.swt.widgets.Shell.releaseChildren(Shell.java:3399)
+org.eclipse.swt.widgets.Widget.release(Widget.java:1338)
+org.eclipse.swt.widgets.Control.release(Control.java:4764)
+org.eclipse.swt.widgets.Widget.dispose(Widget.java:538)
+org.eclipse.swt.widgets.Shell.dispose(Shell.java:3316)
+org.eclipse.jface.window.Window.close(Window.java:335)
+org.eclipse.jface.dialogs.Dialog.close(Dialog.java:988)
+org.eclipse.jface.dialogs.Dialog.okPressed(Dialog.java:948)
+pt.iscte.pandionj.InvokeDialog.okPressed(InvokeDialog.java:57)
+org.eclipse.jface.dialogs.Dialog.buttonPressed(Dialog.java:468)
+org.eclipse.jface.dialogs.Dialog.lambda$0(Dialog.java:619)
+org.eclipse.swt.events.SelectionListener$1.widgetSelected(SelectionListener.java:84)
+org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:252)
+org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+org.eclipse.swt.widgets.Display.sendEvent(Display.java:5884)
+org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1522)
+org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:5126)
+org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:4576)
+org.eclipse.jface.window.Window.runEventLoop(Window.java:823)
+org.eclipse.jface.window.Window.open(Window.java:799)
+pt.iscte.pandionj.InvokeDialog.open(InvokeDialog.java:64)
+pt.iscte.pandionj.extensibility.PandionJUI.openInvocation(PandionJUI.java:165)
+pt.iscte.pandionj.launcher.LaunchCommand.execute(LaunchCommand.java:205)
+org.eclipse.ui.internal.handlers.HandlerProxy.execute(HandlerProxy.java:283)
+org.eclipse.ui.internal.handlers.E4HandlerProxy.execute(E4HandlerProxy.java:97)
+jdk.internal.reflect.GeneratedMethodAccessor59.invoke(Unknown Source)
+java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+java.base/java.lang.reflect.Method.invoke(Method.java:567)
+org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
+org.eclipse.e4.core.internal.di.InjectorImpl.invokeUsingClass(InjectorImpl.java:317)
+org.eclipse.e4.core.internal.di.InjectorImpl.invoke(InjectorImpl.java:251)
+org.eclipse.e4.core.contexts.ContextInjectionFactory.invoke(ContextInjectionFactory.java:173)
+org.eclipse.e4.core.commands.internal.HandlerServiceHandler.execute(HandlerServiceHandler.java:156)
+org.eclipse.core.commands.Command.executeWithChecks(Command.java:488)
+org.eclipse.core.commands.ParameterizedCommand.executeWithChecks(ParameterizedCommand.java:487)
+org.eclipse.e4.core.commands.internal.HandlerServiceImpl.executeHandler(HandlerServiceImpl.java:213)
+org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher.executeCommand(KeyBindingDispatcher.java:308)
+org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher.press(KeyBindingDispatcher.java:580)
+org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher.processKeyEvent(KeyBindingDispatcher.java:647)
+org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher.filterKeySequenceBindings(KeyBindingDispatcher.java:439)
+org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher$KeyDownFilter.handleEvent(KeyBindingDispatcher.java:96)
+org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+org.eclipse.swt.widgets.Display.filterEvent(Display.java:1934)
+org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1521)
+org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1548)
+org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1531)
+org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1570)
+org.eclipse.swt.widgets.Widget.gtk_key_press_event(Widget.java:923)
+org.eclipse.swt.widgets.Control.gtk_key_press_event(Control.java:4000)
+org.eclipse.swt.widgets.Composite.gtk_key_press_event(Composite.java:925)
+org.eclipse.swt.widgets.Widget.windowProc(Widget.java:2415)
+org.eclipse.swt.widgets.Control.windowProc(Control.java:6840)
+org.eclipse.swt.widgets.Display.windowProc(Display.java:6147)
+org.eclipse.swt.internal.gtk3.GTK3.gtk_main_do_event(Native Method)
+org.eclipse.swt.widgets.Display.eventProc(Display.java:1562)
+org.eclipse.swt.internal.gtk3.GTK3.gtk_main_iteration_do(Native Method)
+org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:4573)
+org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1150)
+org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1041)
+org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+java.base/java.lang.reflect.Method.invoke(Method.java:567)
+org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+org.eclipse.equinox.launcher.Main.main(Main.java:1440)
+Error code: 1819102333
+
+User code: 
+
+class Aula5 {
+	// EXAMPLE 1: Define a function to create a vector with size n
+	static char[] charVector(char c, int n) {
+		char v[] = new char[n];
+		for(int i = 0; i < n; i++) {
+			v[i] = c;
+		}
+		return v;
+	}
+	
+	static void testCharVector() {
+		char[] w;
+		char ch='d';
+		int n=5;
+		
+		w=charVector(ch, n);
+		System.out.println(w);
+	}
+	
+	// EXAMPLE 2: Define a procedure to fill a vector with a given char
+	static void fill(char c, char[] v) {
+		for(int i = 0; i < v.length; i++) {
+			v[i] = c;
+		}
+	}
+	
+	static void testFill() {
+		char[] v = {'a', 'c', 'e', 'g', 'i'};
+		
+		// v passes by reference
+		System.out.println(v);
+		fill('c', v);
+		System.out.println(v);
+	}
+	
+	// EXAMPLE 3: Define a procedure to replace all the occurrences of a given char by another
+	static void replace(char a, char b, char[] v) {
+		for(int i = 0; i < v.length; i++) {
+			v[i] = v[i]==a ? b : v[i];
+		}
+	}
+	
+	static void replace2(char a, char b, char[] v) {
+		for(int i = 0; i < v.length; i++) 
+			if (v[i] == a) 
+				v[i] = b;
+	}
+	
+	static void testReplace() {
+		char[] v = {'a', 'c', 'e', 'g', 'i'};
+		
+		// v passes by reference
+		System.out.println(v);
+		replace2('a', 'b', v);
+		System.out.println(v);
+	}
+	
+	// A Build a function to create a vector with consecutive n chars 
+	// starting on a given char c
+	static char[] sequence(char c, int n) {
+		char v[] = new char[n];
+		for(int i = 0; i < n; i++) {
+			v[i] = (char)(c + i);
+		}
+		return v;
+	}
+	
+	static void testSequence() {
+		// v passes by reference
+		System.out.println(sequence('c', 3));
+	}
+	
+	// B Define procedures on vectors that allow
+	// a Replace the first occurrence of a given char by another
+	static void replaceFirst(char a, char b, char[] v) {
+		for(int i = 0; i < v.length; i++) {
+			if (v[i] == a) {
+				v[i] = b;
+				return;
+			}
+		}
+	}
+	
+	static void testReplaceFirst() {
+		char[] v = {'a', 'c', 'c', 'g', 'i'};
+		
+		System.out.println(v);
+		// v passes by reference
+		replaceFirst('c', 'a', v);
+		System.out.println(v);
+	}
+	
+	// b Replace the last occurrence of a given char by another
+	static void replaceLast(char a, char b, char[] v) {
+		for(int i = v.length-1; i>=0; i--) {
+>>>>			if (v[i] == a) {
+				v[i] = b;
+				return;
+			}
+		}
+	}
+	
+	static void testReplaceLast() {
+		char[] v = {'a', 'c', 'c', 'g', 'c'};
+		
+		System.out.println(v);
+		// v passes by reference
+		replaceLast('c', 'a', v);
+		System.out.println(v);
+	}
+	
+	// c Rotate the elements to the left => the first becomes the last
+	static void shiftLeft(char[] v) {
+		char aux = v[0];
+		
+		for(int i = 0; i < v.length-1; i++)
+			v[i] = v[i+1];
+		
+		v[v.length-1] = aux;
+	}
+	
+	static void testShiftLeft() {
+		char[] v = {'a', 'c', 'c', 'g', 'c'};
+		
+		System.out.println(v);
+		// v passes by reference
+		shiftLeft(v);
+		System.out.println(v);
+	}
+	
+	// d Rotate the elements to the right => the last  becomes the first
+	static void shiftRight(char[] v) {
+		char aux = v[v.length-1];
+		
+		for(int i = v.length-1; i>0; i--)
+			v[i] = v[i-1];
+		
+		v[0] = aux;
+	}
+	
+	static void testShiftshiftRight() {
+		char[] v = {'a', 'c', 'c', 'g', 'c'};
+		
+		System.out.println(v);
+		// v passes by reference
+		shiftRight(v);
+		System.out.println(v);
+	}
+	
+	// e Switch the values of 2 positions
+	static void swap(int i, int j, char[] v) {
+		char aux = v[j];
+		
+		v[j] = v[i];
+		v[i] = aux;
+	}
+	
+	static void testSwap() {
+		char[] v = {'a', 'c', 'c', 'g', 'c'};
+		
+		System.out.println(v);
+		// v passes by reference
+		swap(1, 3, v);
+		System.out.println(v);
+	}
+	
+	// f Switch the values of 2 positions
+	static void invert(char[] v) {
+		char aux;
+		
+		for(int i = 0; i < v.length/2; i++) {
+			aux = v[v.length - i -1];
+			v[v.length - i -1] = v[i];
+			v[i] = aux;
+		}
+	}
+	
+	static void testInvert() {
+		char[] v = {'a', 'e', 'c', 'g', 'c'};
+		
+		System.out.println(v);
+		// v passes by reference
+		invert(v);
+		System.out.println(v);
+	}
+	
+	// C Implement the 'Fisher–Yates shuffle' algorithm
+	static int randomIndex(int n) {
+		return (int)(n*Math.random());
+	}
+	
+	static void fYShuffle(char[] v) {
+		char aux;
+		
+		for(int i = 0; i < v.length/2; i++) {
+			aux = v[v.length - i -1];
+			v[v.length - i -1] = v[i];
+			v[i] = aux;
+		}
+	}
+	
+	static void testFYShuffle() {
+		char[] v = {'a', 'e', 'c', 'g', 'c'};
+		
+		System.out.println(v);
+		// v passes by reference
+		fYShuffle(v);
+		System.out.println(v);
+	}
+	
+}
+
+
+Call stack:
+
+testreplaceLast()
+replaceLast('c', 'a', v)
+
