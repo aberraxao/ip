@@ -278,7 +278,7 @@ class Aula5 {
 		System.out.println(concatStart('d', v));
 	}
 	
-	// B Define a procedure that replaces the value of a random position by a given char c
+	// EXTRA B: Define a procedure that replaces the value of a random position by a given char c
 	static void replaceRandom(char c, char[] v) {
 		v[randomIndex(v.length-1)] = c;
 	}
@@ -297,7 +297,7 @@ class Aula5 {
 		System.out.println(v);
 	}
 	
-	// B Define a procedure that exchanges halves of a vector of chars
+	// EXTRA C: Define a procedure that exchanges halves of a vector of chars
 	static void swapHalfs(char[] v) {
 				
 		for(int i = 0; i < v.length/2; i++)
