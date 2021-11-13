@@ -15,6 +15,10 @@
 .metadata
 */.settings/
 
+# InteliJ    
+*.idea/
+*.iml
+
 # JDT-specific (Eclipse Java Development Tools)     
 .classpath
 

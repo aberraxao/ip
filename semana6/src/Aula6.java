@@ -70,17 +70,30 @@ class Aula6 {
 	}
 	
 	// A Put all the elements of a matrix in a vector
-	static int[] unroll(int[][] m) {
+	static int[] unrollRegularMat(int[][] m) {
 		int v[] = new int[evalSum(m)];
-		
+
 		for(int i = 0; i < m.length; i++) 
 			for(int j = 0; j < m[i].length; j++)
-				v[i*m[i].length+j] = m[i][j];
+				v[i * m[i].length + j] = m[i][j];
+		return v;
+	}
+
+	static int[] unroll(int[][] m) {
+		int v[] = new int[evalSum(m)];
+		int aux = 0;
+		
+		for(int i = 0; i < m.length; i++) 
+			for(int j = 0; j < m[i].length; j++) {
+				v[aux] = m[i][j];
+				aux++;
+				}
 		return v;
 	}
 	
 	static void testUnroll() {
-		int m[][] = randomMatrix(3,7);
+		// int m[][] = randomMatrix(7,3);
+		int[][] m = {{1,3}, {1,2,3}};
 		printMatrix(m);
 		printVector(unroll(m));
 	}
