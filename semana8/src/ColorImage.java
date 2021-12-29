@@ -55,7 +55,7 @@ class ColorImage {
 			}
 	}
 
-	void paste(ColorImage img, int xi, int yi) {
+	void paste1(ColorImage img, int xi, int yi) {
 		// Going through the big picture to ensure
 		// that we are between bounds
 		// if xi or yi negatives, make xi or yi = 0
@@ -69,7 +69,7 @@ class ColorImage {
 				this.setColor(x, y, img.getColor(x - xi, y - yi));
 	}
 
-	void paste2(ColorImage img, int xi, int yi) {
+	void paste(ColorImage img, int xi, int yi) {
 		// Going through the big picture to ensure
 		// that we are between bounds
 		for (int x = 0; x < this.getWidth(); x++)
@@ -84,9 +84,9 @@ class ColorImage {
 		ColorImage newImg = new ColorImage(this.getWidth(), this.getHeight());
 
 		for (int x = 0; x < this.getWidth(); x++)
-			for (int y = 0; y < getHeight(); y++)
+			for (int y = 0; y < this.getHeight(); y++)
 				if (this.getColor(x, y).getLuminance() >= 128)
-					newImg.setColor(x, y, Color.COLOR_WHITE);
+					newImg.setColor(x, y, Color.WHITE);
 
 		return newImg;
 	}

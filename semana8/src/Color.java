@@ -10,11 +10,19 @@ class Color {
 	/**
 	* A1 Common colours
 	**/
-	static final Color COLOR_RED = new Color(255, 0, 0);
-	static final Color COLOR_GREEN = new Color(0, 255, 0);
-	static final Color COLOR_BLUE = new Color(0, 0, 255);
-	static final Color COLOR_WHITE = new Color(255, 255, 255);
-	static final Color COLOR_BLACK = new Color(0, 0, 0);
+	static final Color RED = new Color(255, 0, 0);
+	static final Color GREEN = new Color(0, 255, 0);
+	static final Color BLUE = new Color(0, 0, 255);
+	static final Color WHITE = new Color(255, 255, 255);
+	static final Color BLACK = new Color(0, 0, 0);
+	static final Color LIGHT_RED = new Color(220, 20, 60);
+	static final Color DARK_RED = new Color(139, 0, 0);
+	static final Color LIGHT_GREEN = new Color(50, 205, 50);
+	static final Color DARK_GREEN = new Color(0, 128, 0);
+	static final Color LIGHT_CYAN = new Color(0, 255, 255);
+	static final Color DARK_CYAN = new Color(0, 200, 200);
+	static final Color LIGHT_PURPLE = new Color(185, 85, 200);
+	static final Color DARK_PURPLE = new Color(128, 0, 128);
 	
 	// attribute
 	private final int[] rgb; // @color

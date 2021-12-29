@@ -8,11 +8,11 @@ class Aula8 {
 
 	// A1 Add constants to represent the most common colours
 	static void testColours() {
-		printColor(Color.COLOR_RED);
-		printColor(Color.COLOR_GREEN);
-		printColor(Color.COLOR_BLUE);
-		printColor(Color.COLOR_BLACK);
-		printColor(Color.COLOR_WHITE);
+		printColor(Color.RED);
+		printColor(Color.GREEN);
+		printColor(Color.BLUE);
+		printColor(Color.BLACK);
+		printColor(Color.WHITE);
 	}
 
 	// A2 - option 1 Return the inverted colour, similar to Aula7
@@ -65,64 +65,73 @@ class Aula8 {
 	// A1 Invert the colours of an image
 	static void testInvertColorImage() {
 		ColorImage img = new ColorImage(100, 200);
-		System.out.println("before");
 		img.inversa();
-		System.out.println("after");
 
-		ColorImage img2 = new ColorImage("objc1.png");
-		System.out.println("before");
+		ColorImage img2 = new ColorImage("objc1.png");;
 		img2.inversa();
-		System.out.println("after");
+		return;
 	}
 
 	// A2 Make an image brighter
 	static void testBrightColorImage() {
 		ColorImage img = new ColorImage("objc1.png");
-		System.out.println("before");
 		img.brighter(100);
-		System.out.println("after");
+		return;
 	}
 
 	// A3 Mirror an image
 	static void testMirrorColorImage() {
 		ColorImage img = new ColorImage("objc1.png");
-		System.out.println("before");
 		img.mirror();
-		System.out.println("after");
+		return;
 	}
 
 	// A4 Paste a picture on top of another, starting in a given point
 	static void testPaste() {
 		// ColorImage img = new ColorImage("objc1.png");
 		// ColorImage imgSmall = new ColorImage("objc2.png");
-		// img.paste2(imgSmall, 100, 60);
-		// img.paste2(imgSmall, 20, 180);
+		// img.paste(imgSmall, 100, 60);
+		// img.paste(imgSmall, 20, 180);
 
 		ColorImage img = new ColorImage("objc2.png");
 		ColorImage imgBig = new ColorImage("objc1.png");
-		img.paste2(imgBig, -100, 60);
-		img.paste2(imgBig, 1, 30);
+		img.paste(imgBig, -100, 60);
+		img.paste(imgBig, 1, 30);
 	}
 
 	// A5 Black and White
 	static void testBnW() {
 		ColorImage img = new ColorImage("objc1.png");
 		ColorImage imgNew = img.blackWhite();
-		System.out.println("after");
+		return;
 	}
 
 	// A6 Return a copy
 	static void testCopy() {
 		ColorImage img = new ColorImage("objc1.png");
 		ColorImage imgNew = img.copy();
-		System.out.println("after");
+		return;
 	}
 
 	// A7 Returns a rectangle selection of an image
 	static void testRectangle() {
 		ColorImage img = new ColorImage("objc1.png");
 		ColorImage imgNew = img.selection(30, 10, 100, 200);
-		System.out.println("after");
+		return;
+	}
+	
+	// B1 Posterize effect
+	static void testPosterize() {
+		ColorImage img = new ColorImage("objc1.png");
+		Images.posterize(img, Color.BLUE, Color.WHITE);
+		return;
+	}
+	
+	// B2 Pop art effect
+	static void testPopArt() {
+		ColorImage img = new ColorImage("objc1.png");
+		ColorImage imgNew = Images.popArt(img);
+		return;
 	}
 
 }
