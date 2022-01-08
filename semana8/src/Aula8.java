@@ -67,7 +67,8 @@ class Aula8 {
 		ColorImage img = new ColorImage(100, 200);
 		img.inversa();
 
-		ColorImage img2 = new ColorImage("objc1.png");;
+		ColorImage img2 = new ColorImage("objc1.png");
+		;
 		img2.inversa();
 		return;
 	}
@@ -119,18 +120,35 @@ class Aula8 {
 		ColorImage imgNew = img.selection(30, 10, 100, 200);
 		return;
 	}
-	
+
 	// B1 Posterize effect
 	static void testPosterize() {
 		ColorImage img = new ColorImage("objc1.png");
 		Images.posterize(img, Color.BLUE, Color.WHITE);
 		return;
 	}
-	
+
 	// B2 Pop art effect
 	static void testPopArt() {
 		ColorImage img = new ColorImage("objc1.png");
 		ColorImage imgNew = Images.popArt(img);
+		return;
+	}
+
+	// C1 Create a vector with 4 images, one for each quarter of the
+	// image
+	static void testImgVect() {
+		ColorImage img = new ColorImage("objc1.png");
+		ColorImage imgNew[] = Images.imgVect(img);
+		return;
+	}
+	
+	// C2 Put 2 images together
+	static void testHorizontalMerge() {
+		ColorImage img = new ColorImage("objc1.png");
+		ColorImage imgNew[] = Images.imgVect(img);
+		
+		ColorImage imgFinal = Images.horizontalMerge(imgNew[0], imgNew[2]);
 		return;
 	}
 

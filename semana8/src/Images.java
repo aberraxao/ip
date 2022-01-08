@@ -11,11 +11,8 @@ class Images {
 	}
 
 	// B2 Pop art effect
-	static final Color[][] popArtColors = { 
-			{ Color.DARK_CYAN, Color.LIGHT_CYAN },
-			{ Color.DARK_RED, Color.LIGHT_RED },
-			{ Color.DARK_GREEN, Color.LIGHT_GREEN }, 
-			{ Color.DARK_PURPLE, Color.LIGHT_PURPLE } };
+	static final Color[][] popArtColors = { { Color.DARK_CYAN, Color.LIGHT_CYAN }, { Color.DARK_RED, Color.LIGHT_RED },
+			{ Color.DARK_GREEN, Color.LIGHT_GREEN }, { Color.DARK_PURPLE, Color.LIGHT_PURPLE } };
 
 	static ColorImage popArt(ColorImage img) {
 
@@ -26,11 +23,37 @@ class Images {
 			for (int y = 0; y < 2; y++) {
 				ColorImage copy = img.copy();
 				Images.posterize(copy, popArtColors[i][0], popArtColors[i][1]);
-				if (x%2 != 0)
+				if (x % 2 != 0)
 					copy.mirror();
 				newImg.paste(copy, x * img.getWidth(), y * img.getHeight());
 				i++;
 			}
+
+		return newImg;
+	}
+	
+	// C1 Image into a Vector of images
+	static ColorImage[] imgVect(ColorImage img) {
+
+		ColorImage[] newImg = new ColorImage[4];
+
+		int i = 0;
+		for (int x = 0; x < img.getWidth()-1; x = x + img.getWidth() / 2)
+			for (int y = 0; y < img.getHeight()-1; y = y + img.getHeight() / 2) {
+				newImg[i] = img.selection(x, y, x + img.getWidth() / 2, y + img.getHeight() / 2);
+				i++;
+			}
+
+		return newImg;
+	}
+	
+	// C2 Put 2 images together
+	static ColorImage horizontalMerge(ColorImage img1, ColorImage img2) {
+
+		ColorImage newImg = new ColorImage(img1.getWidth()+ img2.getWidth(), img1.getHeight());
+
+		newImg.paste(img1, 0, 0);
+		newImg.paste(img2, img1.getWidth(), 0);
 
 		return newImg;
 	}

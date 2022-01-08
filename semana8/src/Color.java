@@ -15,14 +15,14 @@ class Color {
 	static final Color BLUE = new Color(0, 0, 255);
 	static final Color WHITE = new Color(255, 255, 255);
 	static final Color BLACK = new Color(0, 0, 0);
-	static final Color LIGHT_RED = new Color(220, 20, 60);
-	static final Color DARK_RED = new Color(139, 0, 0);
-	static final Color LIGHT_GREEN = new Color(50, 205, 50);
-	static final Color DARK_GREEN = new Color(0, 128, 0);
-	static final Color LIGHT_CYAN = new Color(0, 255, 255);
-	static final Color DARK_CYAN = new Color(0, 200, 200);
-	static final Color LIGHT_PURPLE = new Color(185, 85, 200);
-	static final Color DARK_PURPLE = new Color(128, 0, 128);
+	static final Color LIGHT_RED = new Color(252, 34, 47);
+	static final Color DARK_RED = new Color(180, 0, 4);
+	static final Color LIGHT_GREEN = new Color(52, 179, 46);
+	static final Color DARK_GREEN = new Color(6, 54, 0);
+	static final Color LIGHT_CYAN = new Color(58, 255, 255);
+	static final Color DARK_CYAN = new Color(23, 184, 182);
+	static final Color LIGHT_PURPLE = new Color(172, 29, 174);
+	static final Color DARK_PURPLE = new Color(52, 0, 52);
 	
 	// attribute
 	private final int[] rgb; // @color

@@ -75,7 +75,7 @@ class ColorImage {
 		for (int x = 0; x < this.getWidth(); x++)
 			for (int y = 0; y < this.getHeight(); y++) {
 
-				if (x > xi && x < xi + img.getWidth() && y > yi && y < yi + img.getHeight())
+				if (x >= xi && x < xi + img.getWidth() && y >= yi && y < yi + img.getHeight())
 					this.setColor(x, y, img.getColor(x - xi, y - yi));
 			}
 	}
@@ -102,11 +102,11 @@ class ColorImage {
 	}
 
 	ColorImage selection(int startx, int starty, int endx, int endy) {
-		ColorImage newImg = new ColorImage(endx - startx + 1, endy - starty + 1);
+		ColorImage newImg = new ColorImage(endx - startx, endy - starty);
 
 		for (int x = startx; x < endx; x++)
 			for (int y = starty; y < endy; y++)
-				newImg.setColor(x- startx, y - starty, this.getColor(x, y));
+				newImg.setColor(x - startx, y - starty, this.getColor(x, y));
 
 		return newImg;
 	}
